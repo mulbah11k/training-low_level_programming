@@ -1,0 +1,15 @@
+# Ignore all object files
+*.o
+
+# Ignore all files with the .out extension
+*.out
+
+# Ignore the build directory
+build/
+
+# Ignore specific main files
+_putchar.c
+*main.c
+
+# Ignore the .DS_Store file (common on macOS)
+.DS_Store
