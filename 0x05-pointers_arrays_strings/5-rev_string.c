@@ -2,29 +2,28 @@
 #include "main.h"
 
 /**
- * print_rev - This function print a string in a reversed
+ * rev_string - This function update a string in reversed other.
  *
  * @s: string to be reversed.
  */
 
-void rev_string(char s[])
+void rev_string(char *s)
 {
-	int len;
-	int len2;
+	int len = 0;
+	int len2 = 0;
+	char temp;
+
 	for (len = 0; s[len] != '\0'; len++)
 	{
 	}
-	len2 = len;
-	char s2[len];
-	while (len2 > 0)
+	len--;
+
+	while (len2 < len)
 	{
-		char s2[len2] = s[len2];
-		printf("%c", s2[len2]);
-		len2--;
+		temp = s[len2];
+		s[len2] = s[len];
+		s[len] = temp;
+		len2++;
+		len--;
 	}
-/*	while (check < len)
-	{
-		s[check] = s2[check];
-		check++;
-	}*/
 }
